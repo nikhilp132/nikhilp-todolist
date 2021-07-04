@@ -8,5 +8,8 @@ function createList() {
 
   var list = document.getElementById('list');
   console.log(listArray);
-  list.innerHTML += listArray[listArray.length - 1] + '<br/>';
+  list.innerHTML += listArray[listArray.length - 1] + ' x' + '<br/>';
 }
+
+//parent
+//parents
