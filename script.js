@@ -5,22 +5,36 @@ function createList() {
   var listItem = document.getElementById('item').value;
 
   listArray.push(listItem);
+  var lastValueIndex = listArray.indexOf(listItem);
 
   var list = document.getElementById('list');
-  console.log(listArray);
   list.innerHTML +=
+    '<span class="close" data-index=' +
+    lastValueIndex +
+    '>x</span> ' +
     listArray[listArray.length - 1] +
-    '<span class="close">x.</span> ' +
     '<br/>';
 }
 
 $(document).ready(function() {
-  $('.close').click(function() {
-    alert();
-  });
+  // $('.close').click(function() {
+  //   alert();
+  // });
+
+  $(document).on('click', '.close', deleteItem);
 });
 
-function deleteItem() {}
+function deleteItem() {
+  var delete_index = this.getAttribute('data-index');
+  var delete_val = listArray[delete_index];
 
+  listArray = listArray.filter(function(values) {
+    return values != delete_val;
+  });
+
+  console.log(listArray);
+}
+
+function displayList() {}
 //parent
 //parents
