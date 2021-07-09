@@ -3,38 +3,30 @@ console.log('hello!');
 var listArray = [];
 function createList() {
   var listItem = document.getElementById('item').value;
-
   listArray.push(listItem);
-  var lastValueIndex = listArray.indexOf(listItem);
-
-  var list = document.getElementById('list');
-  list.innerHTML +=
-    '<span class="close" data-index=' +
-    lastValueIndex +
-    '>x</span> ' +
-    listArray[listArray.length - 1] +
-    '<br/>';
+  displayList(listArray);
 }
 
 $(document).ready(function() {
-  // $('.close').click(function() {
-  //   alert();
-  // });
-
   $(document).on('click', '.close', deleteItem);
 });
 
 function deleteItem() {
   var delete_index = this.getAttribute('data-index');
-  var delete_val = listArray[delete_index];
+  // var delete_val = listArray[delete_index];
 
-  listArray = listArray.filter(function(values) {
-    return values != delete_val;
-  });
-
-  console.log(listArray);
+  listArray.splice(delete_index, 1);
+  displayList(listArray);
 }
 
-function displayList() {}
+function displayList(array) {
+  var list = document.getElementById('list');
+  list.innerHTML = '';
+
+  for (var i = 0; i < array.length; i++) {
+    list.innerHTML +=
+      '<span class="close" data-index=' + i + '>x </span>' + array[i] + '<br>';
+  }
+}
 //parent
 //parents
