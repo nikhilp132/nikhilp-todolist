@@ -13,7 +13,6 @@ $(document).ready(function() {
 
 function deleteItem() {
   var delete_index = this.getAttribute('data-index');
-  // var delete_val = listArray[delete_index];
 
   listArray.splice(delete_index, 1);
   displayList(listArray);
