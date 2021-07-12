@@ -3,8 +3,12 @@ console.log('hello!');
 var listArray = [];
 function createList() {
   var listItem = document.getElementById('item').value;
-  listArray.push(listItem);
-  displayList(listArray);
+  if (listItem == '') {
+    alert('Enter a value');
+  } else {
+    listArray.push(listItem);
+    displayList(listArray);
+  }
 }
 
 $(document).on('click', '.close', deleteItem);
@@ -20,7 +24,7 @@ function displayList(array) {
   var list = document.getElementById('list');
   list.innerHTML = '';
 
-  for (var i = 0; i < array.length; i++) {
+  for (let i = 0; i < array.length; i++) {
     list.innerHTML +=
       '<span class="close" data-index=' + i + '>x </span>' + array[i] + '<br>';
   }
