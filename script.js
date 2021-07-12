@@ -7,9 +7,7 @@ function createList() {
   displayList(listArray);
 }
 
-$(document).ready(function() {
-  $(document).on('click', '.close', deleteItem);
-});
+$(document).on('click', '.close', deleteItem);
 
 function deleteItem() {
   var delete_index = this.getAttribute('data-index');
