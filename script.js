@@ -24,10 +24,19 @@ function displayList(array) {
   var list = document.getElementById('list');
   list.innerHTML = '';
 
-  for (let i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     list.innerHTML +=
       '<span class="close" data-index=' + i + '>x </span>' + array[i] + '<br>';
   }
 }
+
+// function reverse() {
+//   var curentString = document.getElementById('item').value;
+//   var revItem = document.getElementById('revItem');
+//   var length = curentString.length;
+//   var updatedString = curentString.slice(length - 1, length);
+//   console.log(curentString);
+//   console.log(updatedString);
+// }
 //parent
 //parents
