@@ -30,13 +30,18 @@ function displayList(array) {
   }
 }
 
+//Reverse String Dynamically
+
 // function reverse() {
-//   var curentString = document.getElementById('item').value;
+//   var curentString = document.getElementById('stringInput').value;
 //   var revItem = document.getElementById('revItem');
 //   var length = curentString.length;
-//   var updatedString = curentString.slice(length - 1, length);
-//   console.log(curentString);
-//   console.log(updatedString);
+//   var reverseString = '';
+//   for (var i = length - 1; i >= 0; i--) {
+//     var reverseString = reverseString + curentString[i];
+//   }
+//   revItem.value = reverseString;
 // }
+
 //parent
 //parents
