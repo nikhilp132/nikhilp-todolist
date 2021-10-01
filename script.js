@@ -45,3 +45,13 @@ function displayList(array) {
 
 //parent
 //parents
+
+function mainFunc() {
+  innerFunc = function () {
+    return 1;
+  };
+  console.log(innerFunc());
+}
+
+mainFunc();
+console.log(innerFunc());
