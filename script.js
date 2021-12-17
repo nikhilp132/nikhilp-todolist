@@ -56,14 +56,8 @@ function mainFunc() {
 mainFunc();
 console.log(innerFunc());
 
-var obj = {
-  name: 'abc',
-  fun1: function () {
-    var ab = () => {
-      return this;
-    };
-    return ab();
-  },
-};
+const arr = ['1', '2', '3'];
 
-console.log(obj.fun1());
+let [a, b, c, d] = arr;
+
+console.log(d);
