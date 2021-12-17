@@ -55,3 +55,15 @@ function mainFunc() {
 
 mainFunc();
 console.log(innerFunc());
+
+var obj = {
+  name: 'abc',
+  fun1: function () {
+    var ab = () => {
+      return this;
+    };
+    return ab();
+  },
+};
+
+console.log(obj.fun1());
