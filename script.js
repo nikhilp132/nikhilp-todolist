@@ -3,6 +3,7 @@ console.log('hello!');
 var listArray = [];
 function createList() {
   var listItem = document.getElementById('item').value;
+
   if (listItem == '') {
     alert('Enter a value');
   } else {
@@ -46,18 +47,18 @@ function displayList(array) {
 //parent
 //parents
 
-function mainFunc() {
-  innerFunc = function () {
-    return 1;
-  };
-  console.log(innerFunc());
-}
+// function mainFunc() {
+//   innerFunc = function () {
+//     return 1;
+//   };
+//   console.log(innerFunc());
+// }
 
-mainFunc();
-console.log(innerFunc());
+// mainFunc();
+// console.log(innerFunc());
 
-const arr = ['1', '2', '3'];
+// const arr = ['1', '2', '3'];
 
-let [a, b, c, d] = arr;
+// let [a, b, c, d] = arr;
 
-console.log(d);
+// console.log(d);
